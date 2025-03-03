@@ -30,7 +30,7 @@ Code Assistant CLI Tool
 
 options:
   -h, --help            show this help message and exit
-  --src SRC, -s SRC     Set the source code directory (default: /home/malhar/Plaksha/sem6/webdev/code_assistant)
+  --src SRC, -s SRC     Set the source code directory (default: current directory)
   --model MODEL, -m MODEL
                         Select the model (e.g. "gemini", "deepseek-coder-v2") (default: gemini)
 ```

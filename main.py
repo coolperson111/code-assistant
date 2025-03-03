@@ -37,7 +37,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # if verify_models(args.model):
+    # if verify_models(args.model): - need to implement this function
     start_chat_session(args.model, args.src)
 
 
