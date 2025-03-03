@@ -1,0 +1,18 @@
+[project]
+name = "code-assistant"
+version = "0.1.0"
+description = "A cursor-composer like AI coding assistant powered by free LLMs and tools to help you write better code."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckduckgo-search>=7.5.0",
+    "google-genai>=1.2.0",
+    "langchain>=0.3.19",
+    "langchain-community>=0.3.18",
+    "langchain-core>=0.3.40",
+    "langchain-google-genai>=2.0.11",
+    "langchain-ollama>=0.2.3",
+    "ollama>=0.4.7",
+    "python-dotenv>=1.0.1",
+    "rich>=13.9.4",
+]

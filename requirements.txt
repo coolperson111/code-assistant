@@ -1,0 +1,10 @@
+# dotenv - secrets, API keys, etc
+python-dotenv
+
+# for console pretty printing
+rich
+
+# llm models
+langchain
+# google-genai
+# ollama
