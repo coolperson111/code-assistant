@@ -1,7 +1,7 @@
 """
 Chat module to start a chat session with the selected model
 """
-
+import json
 
 from langchain_community.tools import DuckDuckGoSearchResults
 # from google import genai
@@ -90,8 +90,11 @@ def start_chat_session(model: str, src: str) -> None:
 
             tools_width = get_panel_width(str(response1.tool_calls))
             content1_width = get_panel_width(response1.content)
-            console.print(Align(Panel.fit(Markdown(str(response1.tool_calls)), title="bot", border_style="blue", width=tools_width), "left"))
-            console.print(Align(Panel.fit(Markdown(response1.content), title="bot", border_style="green", width=content1_width), "left"))
+            if response1.tool_calls:
+                console.print(Align(Panel.fit(Markdown(json.dumps(response1.tool_calls)), title="bot", border_style="blue", width=tools_width), "left"))
+            if response1.content:
+                console.print(Align(Panel.fit(Markdown(response1.content), title="bot", border_style="green", width=content1_width), "left"))
+
 
             response2 = llm_tools.invoke(messages)
 
